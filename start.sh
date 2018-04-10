@@ -1,0 +1,1 @@
+cd /usr/share/atlassian-plugin-sdk-6.2.2/apache-maven-3.2.1/ && atlas-run-standalone --product jira --jvmargs "-Xmx4096M -Xms1024M" && disown %1
