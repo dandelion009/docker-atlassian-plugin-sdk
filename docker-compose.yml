@@ -1,7 +1,9 @@
 version: '2'
 services:
   web:
-    command: /bin/bash -c 'cd /usr/share/atlassian-plugin-sdk-6.2.2/apache-maven-3.2.1/ && atlas-run-standalone --product jira --jvmargs "-Xmx4096M -Xms1024M" && disown %1'
+    command: /bin/bash /root/tmp/start.sh
     image: translucent/atlassian-plugin-sdk:latest
     ports:
       - "2990:2990"
+    volumes:
+      - .:/root/tmp
